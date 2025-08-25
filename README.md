@@ -35,7 +35,7 @@ Link tại https://github.com/adsb-related-code/mlat-client
 python3 -m venv mlat-client
 source mlat-client/bin/activate
 ```
-Tiếp theo, tạo một thư mục để chứa repo mlat-client, tránh làm clone vào thư mục venv sau đó clone code về
+Tiếp theo, tạo một thư mục để chứa repo mlat-client, tránh clone vào thư mục chứa venv. Sau đó clone code về
 ```bash
 mkdir mlat-client-dir
 cd mlat-client-dir
