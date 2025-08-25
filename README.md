@@ -112,7 +112,7 @@ Copy nội dung vào file script
 TARGET_IP="100.124.196.54"
 
 # Chuyển tiếp từ cổng local 30005 đến máy net-only
-exec socat -u TCP:127.0.0.1:30005 TCP:$TARGET_IP:30005
+exec socat -u TCP:127.0.0.1:30005 TCP:$TARGET_IP:30004
 ```
 
 Sau đó cấp quyền thực thi:
