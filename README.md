@@ -17,6 +17,11 @@ Sau đó cài lighttpd để hiển thị giao diện web tar1090
 sudo apt install -y lighttpd
 ```
 Sau đó vào file config của readsb để enable modeac, và điền lat, long của trạm thu theo mẫu sau
+
+```bash
+sudo nano /etc/default/readsb
+```
+
 ```bash
 RECEIVER_OPTIONS="--device 0 --device-type rtlsdr --gain auto --ppm 0"
 DECODER_OPTIONS="--max-range 450 --write-json-every 1 --modeac"
