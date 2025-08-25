@@ -60,6 +60,7 @@ deactivate
 
 
 Bước 5: Viết file systemd cho mlat-client để service tự chạy và khởi động lại khi có lỗi
+
 Tạo mới file service
 ```bash
 sudo nano /etc/systemd/system/mlat-client.service
@@ -93,6 +94,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart mlat-client.service
 ```
 Bước 6: Tạo service socat để forward dữ liệu beast sang địa chỉ máy hiển thị
+
 Install socat
 ```bash
 sudo apt-get install socat
@@ -144,6 +146,7 @@ sudo systemctl enable socat-beast.service
 sudo systemctl start socat-beast.service
 ```
 Bước 7: Optional (nên cài để theo dõi tình hình hệ thống). Cài graphs1090
+
 Chạy lệnh sau
 ```bash
 sudo bash -c "$(curl -L -o - https://github.com/wiedehopf/graphs1090/raw/master/install.sh)"
