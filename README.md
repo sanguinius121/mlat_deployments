@@ -52,6 +52,13 @@ Check thấy ở trong /home/mlat-client-5/mlat-client/bin có mlat-client là �
 mlat-client --help
 ```
 mlat-client trả lại hướng dẫn mà không gặp lỗi gì là được
+
+Sau bước này nên deactivate venv trước đó đi 
+```bash
+deactivate
+```
+
+
 Bước 5: Viết file systemd cho mlat-client để service tự chạy và khởi động lại khi có lỗi
 Tạo mới file service
 ```bash
