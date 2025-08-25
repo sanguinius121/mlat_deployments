@@ -47,8 +47,7 @@ Khi này chúng ta nên ở thư mục /home/username/mlat-client-dir/mlat-clien
 python3 setup.py build
 python3 setup.py install
 ```
-Check thấy ở trong /home/mlat-client-5/mlat-client/bin có mlat-client là được
-test thử bằng cách invoke 
+Check thấy ở trong /home/mlat-client-5/mlat-client/bin có mlat-client là được. Test thử bằng cách invoke 
 ```bash
 mlat-client --help
 ```
