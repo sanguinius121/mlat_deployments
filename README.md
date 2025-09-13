@@ -160,8 +160,8 @@ Copy nội dung file service socat như sau
 ```bash
 [Unit]
 Description=Forward dump1090-fa Beast data to net-only receiver
-After=network.target dump1090-fa.service
-Requires=dump1090-fa.service
+After=network.target readsb.service
+Requires=readsb.service
 
 [Service]
 ExecStart=/usr/local/bin/socat-beast-forward.sh
