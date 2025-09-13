@@ -12,6 +12,33 @@ Bước 3: Cài đặt readsb trên Pi 4
 sudo bash -c "$(wget -O - https://github.com/wiedehopf/adsb-scripts/raw/master/readsb-install.sh)"
 sudo reboot
 ```
+ Lưu ý!!! Nếu sử dụng rtl-sdr V4 thì phải cài driver build từ source 
+ Purge the previous driver:
+ ```bash
+sudo apt purge ^librtlsdr
+sudo rm -rvf /usr/lib/librtlsdr* /usr/include/rtl-sdr* /usr/local/lib/librtlsdr* /usr/local/include/rtl-sdr* /usr/local/include/rtl_* /usr/local/bin/rtl_*
+```
+
+Install the latest drivers:
+```bash
+sudo apt-get install libusb-1.0-0-dev git cmake pkg-config
+git clone https://github.com/osmocom/rtl-sdr
+cd rtl-sdr-blog
+mkdir build
+cd build
+cmake ../ -DINSTALL_UDEV_RULES=ON
+make
+sudo make install
+sudo cp ../rtl-sdr.rules /etc/udev/rules.d/
+sudo ldconfig
+```
+
+Blacklist the DVB-T TV drivers.
+```bash
+echo 'blacklist dvb_usb_rtl28xxu' | sudo tee --append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
+Reboot
+```
+
 Sau đó cài lighttpd để hiển thị giao diện web tar1090
 ```bash
 sudo apt install -y lighttpd
