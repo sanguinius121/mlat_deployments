@@ -13,6 +13,7 @@ sudo bash -c "$(wget -O - https://github.com/wiedehopf/adsb-scripts/raw/master/r
 sudo reboot
 ```
  Lưu ý!!! Nếu sử dụng rtl-sdr V4 thì phải cài driver build từ source 
+ 
  Purge the previous driver:
  ```bash
 sudo apt purge ^librtlsdr
