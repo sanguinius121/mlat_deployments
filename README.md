@@ -89,7 +89,8 @@ Tạo mới file service
 sudo nano /etc/systemd/system/mlat-client.service
 ```
 Sau đó copy nội dung của file service vào, lưu ý phải sửa user, đường dẫn tới mlat-client, lat, long của client cho đúng!!!
-```bash[Unit]
+```bash
+[Unit]
 Description=mlat-client Service
 After=network.target
 
